@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dv72prxc21rq"]
+
+[ext_resource type="Texture2D" uid="uid://dy0i4gerj2qe5" path="res://Spritesheets/Inimigos/Urso(1).png" id="1_3gri1"]
+[ext_resource type="Script" uid="uid://imxf5mkrc5ua" path="res://Scripts/inimigo_urso.gd" id="1_wwi0v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3kjun"]
+radius = 58.0
+height = 156.0
+
+[node name="inimigo_urso" type="Area2D" unique_id=2042278430]
+script = ExtResource("1_wwi0v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=534042579]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_3gri1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=945154620]
+position = Vector2(6, 1)
+shape = SubResource("CapsuleShape2D_3kjun")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://c06rl536lvw0s"]
+
+[ext_resource type="Script" uid="uid://c1iookngvxeh4" path="res://Scripts/character.gd" id="1_ejsiy"]
+[ext_resource type="Texture2D" uid="uid://bfviewmw01dv8" path="res://Spritesheets/Coelho/Coelhisco - fall 1.png" id="2_s7tkn"]
+[ext_resource type="Texture2D" uid="uid://dmt3v0ag612iq" path="res://Spritesheets/Coelho/Coelhisco - fall 2.png" id="3_nw3qc"]
+[ext_resource type="Texture2D" uid="uid://dur1aka0xe6tg" path="res://Spritesheets/Coelho/Coelhisco - jump 1.png" id="4_l1rcp"]
+[ext_resource type="Texture2D" uid="uid://84mxbs2iooyd" path="res://Spritesheets/Coelho/Coelhisco - fall 3.png" id="4_rtvxd"]
+[ext_resource type="Texture2D" uid="uid://devutuebeaill" path="res://Spritesheets/Coelho/Coelhisco - truque 1 DoubleJump.png" id="5_1g2gg"]
+[ext_resource type="Texture2D" uid="uid://c7xa636d85e5x" path="res://Spritesheets/Coelho/Coelhisco - jump 2.png" id="5_le1tg"]
+[ext_resource type="Texture2D" uid="uid://b03lkve1vpjxd" path="res://Spritesheets/Coelho/Coelhisco - jump 3.png" id="6_2daya"]
+[ext_resource type="Texture2D" uid="uid://cxkkfqu2ectxm" path="res://Spritesheets/Coelho/Coelhisco - truque 2 DoubleJump.png" id="6_4kq8q"]
+[ext_resource type="Texture2D" uid="uid://cdm37eba2u2ro" path="res://Spritesheets/Coelho/Coelhisco - run 1.png" id="7_mvyft"]
+[ext_resource type="Texture2D" uid="uid://ejp7wv3nksre" path="res://Spritesheets/Coelho/Coelhisco - truque 3 DoubleJump.png" id="7_px0br"]
+[ext_resource type="Texture2D" uid="uid://btq24ditx6mh7" path="res://Spritesheets/Coelho/Coelhisco - voadora 1.png" id="8_0wngn"]
+[ext_resource type="Texture2D" uid="uid://oaaqv38ck0g4" path="res://Spritesheets/Coelho/Coelhisco - run 2.png" id="8_dm6ib"]
+[ext_resource type="Texture2D" uid="uid://csaxee52k62u2" path="res://Spritesheets/Coelho/Coelhisco - voadora 2.png" id="9_8iu2w"]
+[ext_resource type="Texture2D" uid="uid://cjslag77usdmi" path="res://Spritesheets/Coelho/Coelhisco - run 3.png" id="9_q5mnj"]
+[ext_resource type="PackedScene" uid="uid://d3xy5s1kdmy3b" path="res://Scenes/Chain.tscn" id="10_kq7hj"]
+[ext_resource type="Texture2D" uid="uid://bvr443n1w456c" path="res://Spritesheets/Coelho/Coelhisco - voadora 3.png" id="10_vl1po"]
+[ext_resource type="Texture2D" uid="uid://iyc1nso2ent2" path="res://Spritesheets/Coelho/Coelhisco - graple.png" id="11_bagv5"]
+[ext_resource type="Texture2D" uid="uid://bnx62tlta314e" path="res://Spritesheets/Coelho/Coelhisco - graple sem braco.png" id="12_25xpv"]
+[ext_resource type="Texture2D" uid="uid://cy3wcrkhts7c2" path="res://Spritesheets/Coelho/Coelhisco - shoot1.png" id="19_rtvxd"]
+[ext_resource type="Texture2D" uid="uid://bk2x45oc37tuw" path="res://Spritesheets/Coelho/Coelhisco - shoot2.png" id="20_1g2gg"]
+[ext_resource type="Texture2D" uid="uid://d4l2wn4ypgkf" path="res://Spritesheets/Coelho/Coelhisco - shoot3.png" id="21_4kq8q"]
+[ext_resource type="Texture2D" uid="uid://djhjnfig285ib" path="res://Spritesheets/Coelho/Coelhisco - slide maior 1.png" id="23_1g2gg"]
+[ext_resource type="Texture2D" uid="uid://co03sly2purc7" path="res://Spritesheets/Coelho/Coelhisco - slide maior 2.png" id="24_4kq8q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_23o0p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1g2gg")
+}],
+"loop": 1,
+"name": &"DJump1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4kq8q")
+}],
+"loop": 1,
+"name": &"DJump2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_px0br")
+}],
+"loop": 1,
+"name": &"DJump3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0wngn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8iu2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vl1po")
+}],
+"loop": 0,
+"name": &"Dashing",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s7tkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nw3qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rtvxd")
+}],
+"loop": 2,
+"name": &"Falling",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_25xpv")
+}],
+"loop": 1,
+"name": &"Hooked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bagv5")
+}],
+"loop": 1,
+"name": &"Hooked_Arm",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_l1rcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_le1tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2daya")
+}],
+"loop": 0,
+"name": &"Jumping",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mvyft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dm6ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q5mnj")
+}],
+"loop": 1,
+"name": &"Running",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_rtvxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1g2gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4kq8q")
+}],
+"loop": 1,
+"name": &"Shooting",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_1g2gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4kq8q")
+}],
+"loop": 1,
+"name": &"Sliding",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1g2gg"]
+radius = 16.0
+height = 61.0
+
+[node name="Character" type="CharacterBody2D" unique_id=1980964755]
+collision_mask = 2
+script = ExtResource("1_ejsiy")
+
+[node name="Chain" parent="." unique_id=1466876100 instance=ExtResource("10_kq7hj")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1710414656]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_23o0p")
+animation = &"Running"
+autoplay = "Running"
+frame = 2
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=416090841]
+position = Vector2(8, -8)
+shape = SubResource("CapsuleShape2D_1g2gg")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1834373066]
+target_position = Vector2(0, 65)
+collision_mask = 2
+
+[node name="RayCastTeto" type="RayCast2D" parent="." unique_id=1076559466]
+target_position = Vector2(0, -26)

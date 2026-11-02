@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://pqvp5govw8h0"]
+
+[ext_resource type="Texture2D" uid="uid://dklyqbnncp8ax" path="res://Spritesheets/Inimigos/Abelha1.png" id="1_3x6go"]
+[ext_resource type="Script" uid="uid://da22s07javff3" path="res://Scripts/inimigo_abelha.gd" id="1_eumah"]
+[ext_resource type="Texture2D" uid="uid://bmo7rg7giavp7" path="res://Spritesheets/Inimigos/Abelha2.png" id="2_eumah"]
+[ext_resource type="Texture2D" uid="uid://co3r5oph05uw6" path="res://Spritesheets/Inimigos/Abelha3.png" id="3_bj65u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0cr4r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3x6go")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eumah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bj65u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_arp66"]
+radius = 28.0
+height = 56.0
+
+[node name="inimigo_abelha" type="Area2D" unique_id=2002523273]
+script = ExtResource("1_eumah")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1620732853]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_0cr4r")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1930692200]
+position = Vector2(-6, 1)
+shape = SubResource("CapsuleShape2D_arp66")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

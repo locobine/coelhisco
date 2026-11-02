@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bqkrvl3l7iyeb"]
+
+[ext_resource type="PackedScene" uid="uid://cmli4k5ih44ex" path="res://Scenes/inimigo_raposa.tscn" id="1_nqmot"]
+
+[node name="map_chunk3" type="Node2D" unique_id=2091397409]
+
+[node name="PontoDeSaida" type="Marker2D" parent="." unique_id=1055402902]
+position = Vector2(146, 0)
+
+[node name="inimigo_raposa" parent="." unique_id=1276708625 instance=ExtResource("1_nqmot")]
+position = Vector2(70, 402)

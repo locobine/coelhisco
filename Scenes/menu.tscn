@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://buvu04gsh4yld"]
+
+[ext_resource type="Texture2D" uid="uid://cw6tkhdg328cv" path="res://Spritesheets/Resources/COELHISCO - Title Screen.png" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://d1prk2f213m5t" path="res://Scripts/menu.gd" id="1_xhh6f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0cr4r"]
+font_size = 51
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1rerr"]
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+
+[node name="menu" type="Control" unique_id=1752902257]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xhh6f")
+
+[node name="CoelhiscoTitleScreen" type="Sprite2D" parent="." unique_id=1466549020]
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1rerr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1499716167]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1576287405]
+offset_left = 1242.0
+offset_top = 464.0
+offset_right = 1282.0
+offset_bottom = 487.0
+text = "PRESS ENTER TO PLAY"
+label_settings = SubResource("LabelSettings_0cr4r")
+uppercase = true
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=2084895162]
+offset_left = 1217.0
+offset_top = 828.0
+offset_right = 1257.0
+offset_bottom = 851.0
+text = "Z = Jump or double jump
+X = Dash to kill enemies
+C = Slide under obstacles
+Mouse Click = Hook"
+label_settings = SubResource("LabelSettings_1rerr")

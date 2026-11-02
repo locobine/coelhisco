@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://buhjr0s52gp7v"]
+
+[ext_resource type="PackedScene" uid="uid://pqvp5govw8h0" path="res://Scenes/inimigo_abelha.tscn" id="1_x04ue"]
+
+[node name="map_chunk3" type="Node2D" unique_id=2091397409]
+
+[node name="PontoDeSaida" type="Marker2D" parent="." unique_id=1055402902]
+position = Vector2(146, 0)
+
+[node name="inimigo_abelha" parent="." unique_id=2002523273 instance=ExtResource("1_x04ue")]
+position = Vector2(66, 480)

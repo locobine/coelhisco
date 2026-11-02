@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://coklnnxqkoxhb"]
+
+[ext_resource type="PackedScene" uid="uid://c06rl536lvw0s" path="res://Scenes/character.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dbhdxqbes0p4f" path="res://Scenes/map_chunk_0.tscn" id="3_6bp64"]
+[ext_resource type="Script" uid="uid://d5lk4lmwvip8" path="res://Scripts/map_manager.gd" id="3_21xkr"]
+[ext_resource type="PackedScene" uid="uid://m3ftynbsuldb" path="res://Scenes/map_chunk_1.tscn" id="4_6bp64"]
+[ext_resource type="PackedScene" uid="uid://bpvkpfhhf8tm0" path="res://Scenes/map_chunk_2.tscn" id="5_344ge"]
+[ext_resource type="PackedScene" uid="uid://16nkgg8b5ae6" path="res://Scenes/map_chunk_3.tscn" id="6_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://cfjr5iwmkdo37" path="res://Scenes/map_chunk_4.tscn" id="7_hptm8"]
+[ext_resource type="PackedScene" uid="uid://0l0rrxamr8yt" path="res://Scenes/map_chunk_5.tscn" id="8_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://buhjr0s52gp7v" path="res://Scenes/map_chunk_6.tscn" id="9_6iyac"]
+[ext_resource type="PackedScene" uid="uid://bqkrvl3l7iyeb" path="res://Scenes/map_chunk_7.tscn" id="10_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://dxlsb7i0o048w" path="res://Scenes/map_chunk_8.tscn" id="11_6iyac"]
+[ext_resource type="PackedScene" uid="uid://bxol7mn2hcxo0" path="res://Scenes/map_chunk_9.tscn" id="12_fdnlq"]
+
+[node name="main" type="Node" unique_id=1520624880]
+
+[node name="Character" parent="." unique_id=1980964755 instance=ExtResource("2_bo1nx")]
+z_index = 1
+position = Vector2(92, 402)
+
+[node name="Camera2D" type="Camera2D" parent="Character" unique_id=198749998]
+position = Vector2(254, 0)
+
+[node name="MapManager" type="Node2D" parent="." unique_id=1937735461]
+script = ExtResource("3_21xkr")
+bloco_inicial = ExtResource("3_6bp64")
+templates_modulos = Array[PackedScene]([ExtResource("4_6bp64"), ExtResource("5_344ge"), ExtResource("6_ynf5e"), ExtResource("7_hptm8"), ExtResource("8_d1ilt"), ExtResource("9_6iyac"), ExtResource("10_fdnlq"), ExtResource("11_6iyac"), ExtResource("12_fdnlq")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2059065256]
+
+[node name="LabelPontuacao" type="Label" parent="CanvasLayer" unique_id=804603553]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "00000"

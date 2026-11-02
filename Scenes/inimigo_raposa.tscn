@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cmli4k5ih44ex"]
+
+[ext_resource type="Texture2D" uid="uid://c01scujt88gok" path="res://Spritesheets/Inimigos/Raposa1.png" id="1_xk3ba"]
+[ext_resource type="Script" uid="uid://br3dkih7yqdld" path="res://Scripts/inimigo_raposa.gd" id="1_yu0ly"]
+[ext_resource type="Texture2D" uid="uid://ddgmyyn1qfyif" path="res://Spritesheets/Inimigos/Raposa2.png" id="2_yu0ly"]
+[ext_resource type="Texture2D" uid="uid://c75svih7uxijf" path="res://Spritesheets/Inimigos/Raposa3.png" id="3_b18lo"]
+[ext_resource type="Texture2D" uid="uid://c3ed3x31pvyp3" path="res://Spritesheets/Inimigos/Raposa4.png" id="4_7dlb3"]
+[ext_resource type="Texture2D" uid="uid://cnribs1141ex2" path="res://Spritesheets/Inimigos/Raposa5.png" id="5_v375r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0cr4r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xk3ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yu0ly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b18lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7dlb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_v375r")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 19.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_arp66"]
+radius = 64.0
+height = 128.0
+
+[node name="inimigo_raposa" type="Area2D" unique_id=1276708625]
+script = ExtResource("1_yu0ly")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1823394853]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_0cr4r")
+autoplay = "default"
+frame_progress = 0.48504478
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2014562671]
+shape = SubResource("CapsuleShape2D_arp66")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

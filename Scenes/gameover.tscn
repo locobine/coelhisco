@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cg6i25j7ce0eo"]
+
+[ext_resource type="Texture2D" uid="uid://bwwaw8inaep8d" path="res://Spritesheets/Coelho/Coelhisco idle.png" id="1_fg4p2"]
+[ext_resource type="Script" uid="uid://b8xlqaj2ei75b" path="res://Scripts/gameover.gd" id="1_qpupn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2oltb"]
+font_size = 51
+
+[sub_resource type="LabelSettings" id="LabelSettings_qpupn"]
+font_size = 57
+
+[node name="gameover" type="Control" unique_id=944914087]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qpupn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2143027792]
+
+[node name="Message" type="Label" parent="CanvasLayer" unique_id=1046762055]
+offset_left = 806.0
+offset_top = 430.0
+offset_right = 898.0
+offset_bottom = 505.0
+text = "GAME OVER
+5936
+Click To Exit"
+label_settings = SubResource("LabelSettings_2oltb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoelhiscoIdle" type="Sprite2D" parent="CanvasLayer" unique_id=1365782842]
+position = Vector2(546, 523)
+texture = ExtResource("1_fg4p2")
+
+[node name="Best" type="Label" parent="CanvasLayer" unique_id=813786073]
+offset_left = 889.0
+offset_top = 791.0
+offset_right = 1038.0
+offset_bottom = 950.0
+text = "BEST:
+6969"
+label_settings = SubResource("LabelSettings_qpupn")
+horizontal_alignment = 1
+vertical_alignment = 1
